@@ -1,121 +1,353 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap');
+
+/*Estilização Geral*/
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    padding: 0%;
-    margin: 0px;
 }
 
-header{
-    background-color: #00C3CE;
-    position: fixed;
-    z-index: 999;
-    width: 100%;
+body {
+    background-color: #ffffff;
+    color: #ffffff;
+    /* background-color: #268DE0;
+    background-color: #1DC6E0;
+    background-color: #2652E0;
+    background-color: #385166;  */
 }
 
-.header-content{
-    width: 100%;
-    max-width: 999px;
+a,
+ul {
+    text-decoration: none;
+    list-style: none;
+
+}
+
+html {
+    height: 100%;
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+}
+
+.interface {
+    max-width: 1380px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 0 ;
 }
 
-.links{
+.flex {
+    display: flex;
+}
+
+/* Estilização do Cabeçalho */
+.conteudoHeader {
+    max-width: 1120px;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header.rolagem {
+    background-color: #fff;
+    padding: 20px 4%;
+    border-bottom: 2px solid #1DC6E0;
+}
+
+header.rolagem a,
+header.rolagem span {
+    color: #1DC6E0;
+}
+
+header {
+    width: 100%;
+    padding: 3.75rem 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+
+header span {
+    font-family: Teko;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 40px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header button {
+    font-family: Roboto, sans-serif;
+    padding: 1em 1.8em;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+header button:hover {
+    background-color: #17a8be;
+    color: #fff;
+
+}
+
+header.rolagem button {
+    background-color: #1DC6E0;
+    color: #fff;
+}
+
+header.rolagem button:hover {
+    background-color: #3ed9f1;
+    color: #fff;
+}
+
+/* Estilização do hero. */
+.homeBack {
+    height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #00BFFF);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    padding: 40px 4%;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+
+.homeTexto {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+h1 {
+    font-family: Montserrat;
+    font-size: 56px;
+    font-weight: 800;
+}
+
+hr {
+    border-color: #fff;
+    width: 700px;
+}
+
+.subtituloHome{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.botaoHome button{
+    font-family: Roboto, sans-serif;
+    padding: 1em 1.8em;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.botaoHome button:hover{
+    background-color: green;
+    color: #fff;
+}
+
+.homeImagem {
+    width: 45%;
+}
+
+.homeImagem>img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/*Estilização da section beneficios*/
+.beneficios{
+    color: #17a8be;
+    padding: 40px 4%;
+}
+
+h2 {
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: #00BFFF;
+    padding: 20px;
+    border: 2px solid #00BFFF;
+    border-radius: 40px;
+    margin-top: 45px;
+    transition: .2s;
+    
+
+}
+
+.cards:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #00282e6b;
+}
+
+.cards i{
+    font-size: 75px;
+}
+
+.texto h3{
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.texto p{
+    font-size: 20px;
+}
+
+.beneficios .flex{
+    gap: 30px;
+    flex-direction: column;
+}
+
+.cardsTop{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.cardsBottom{
     display: flex;
     gap: 20px;
 }
 
-.home{
+/*Estilização Serviços*/
+.servicos{
+    height: 100vh;
+    background: linear-gradient(to bottom, #87CEEB, #00BFFF);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 4%;
+}
+
+.servicos .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.imgServicos{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
     position: relative;
-    overflow: hidden;
-    background-color: var(--roxo);
 }
 
-.home-principal{
-    overflow: hidden;
-    min-height: 600px;
-    position: relative;
-    z-index: 2;
+.imgServicos:hover{
+    background-position: 100% 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin: 0 auto;
-    max-width: 999px;
-}
-
-.home-top{
+    height: 100%;
+    background-color: #000000bd;
+    border-radius: 40px;
     display: flex;
-    justify-content: space-between;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-start;
-    margin: 180px 0 80px 0px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    opacity: 0;
+    transition: .5s;
 }
 
-.home-top-left{
-    display: flex;
-    width: 100%;
-    max-width: 45%;
+.overlay:hover{
+    opacity: 1;
 }
 
-.home-bottom{
-    display: flex;
-    justify-content: space-between;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: stretch;
-    margin: 0 0 90px 0;
+/*Estilização da section Contato*/
+.contato{
+    color: #00BFFF;
+    padding: 80px 4%;
 }
 
-.left{
-    display: flex;
-    width: 100%;
-    max-width: 51%;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: flex-start;
-    align-items: flex-start;
+h3{
+    /* height: 100vh; */
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-.right{
-    display: flex;
-    width: 100%;
-    max-width: 40%;
-    padding: 0 0 22px 0;
-    flex-direction: column;
-    justify-content: flex-end;
+.contato button{
+    background-color: #00BFFF;
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    padding: 1em 1.8em;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 35px;
+    text-transform: uppercase;
+    transition: .3s;
 }
 
-.nossosServiços{
-    background-color: #00C3CE;
-    background-repeat: repeat;
-    background-size: 90px;
-    position: relative;
+.contato button:hover{
+    background-color: green;
     color: white;
+    box-shadow: 0 0 48px 10px green;
 }
 
-.conteudo{
-    width: 100%;
-    max-width: 999px;
-    margin: 0 auto;
-    padding: 60px 0;
+.contato .flex{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.conteudo h2{
-    color: green;
-    font-size: 4.5em;
-    margin: 0 0 0 0;
-    line-height: 1em;
+/*Estilização do footer*/
+footer{
+    padding: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #17a8be;
 }
 
-.conteudo p {
-    font-size: 1.5em;
-    line-height: 1.2em;
-    max-width: 92%;
-    padding: 24px 0;
+footer p {
+    font-size: 1rem;
+    font-weight: 600;
 }
