@@ -12,19 +12,18 @@
 
 <body>
     <header id="header">
-        <div class="conteudoHeader"><!--conteudo-->
-            <nav> <!--Conteudo Flex-->
+        <div class="conteudoHeader">
+            <nav>
                 <span id="logo">Impermeatech</span>
                 <ul>
                     <li><a href="#">Nossos Serviços</a></li>
-                    <li><a href="#">Localidade</a></li>
                     <li><button>Contato</button></li>
                 </ul>
             </nav>
         </div>
-        <div id="whats">
+        <!-- <div id="whats">
             <a href="#" class="float"><i class="bi bi-whatsapp my-float"></i> </a>
-        </div>
+        </div> -->
     </header>
 
     <main>
@@ -33,17 +32,21 @@
                 <div class="interface">
                     <div class="flex">
                         <div class="homeTexto">
-                            <h1>Proteja sua casa contra vazamentos!</h1>
+                            <h1><span>Proteja</span> sua casa contra <span>vazamentos!</span></h1>
                             <p class="subtituloHome">
-                                Proteja seu imóvel com impermeabilizações de alta qualidade! Oferecemos soluções completas de impermeabilização para telhados e lajes com manta aluminizada e líquida, garantindo segurança e durabilidade. Agende agora uma visita técnica gratuita e receba um orçamento sem compromisso!
-                                </p>
+                                Proteja seu imóvel com <span>impermeabilizações de alta qualidade!</span> Oferecemos
+                                soluções completas de impermeabilização para <span>telhados e lajes com manta
+                                    aluminizada e líquida,</span> garantindo segurança e durabilidade. Agende agora uma
+                                visita técnica gratuita e receba um <span>orçamento sem compromisso!</span>
+                            </p>
                             <div class="botaoHome">
                                 <a href="#"><button>Quero um orçamento</button></a>
                             </div>
                         </div>
-                        <div class="homeImagem">
-                            <img src="Imagens/teste1-m.jpg" alt="">  
-                        </div>
+                        <picture class="homeImagem">
+                            <source srcset="imagens/pequenas/foto-p.png" media="(max-width: 600px)">
+                            <img src="imagens/grandes/foto-g.png" alt="">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -51,40 +54,47 @@
 
         <section class="beneficios">
             <div class="interface">
-                <h2 class="titulo">Beneficios Para Você</h2>
+                <h2 class="titulo"><span>Benefícios</span> Para Você</h2>
                 <div class="flex">
                     <div class="cardsTop">
-                        <div class="cards"><!--Conteudo-->
+                        <!-- Card 1 -->
+                        <div class="cards">
                             <i class="bi bi-award"></i>
                             <div class="texto">
                                 <h3>Garantia de 3-5 anos</h3>
-                                <p>Nossos serviços garantem total proteção à sua casa, proporcionando uma defesa eficaz
-                                    contra
-                                    infiltrações e vazamentos.</p>
+                                <p>
+                                    Nossos serviços garantem total proteção à sua casa,
+                                    proporcionando uma defesa eficaz contra infiltrações
+                                    e vazamentos.
+                                </p>
                             </div>
                         </div>
-                        <div class="cards"><!--Conteudo-->
+                    
+                        <!-- Card 2 -->
+                        <div class="cards">
                             <i class="bi bi-pin-map-fill"></i>
                             <div class="texto">
-                                <h3>Atendimento em toda são paulo</h3>
-                                <p>Atendemos em toda São Paulo. Entre em contato conosco para agendar uma visita técnica da
-                                    nossa equipe.</p>
+                                <h3 id="atendimento">Atendimento em toda São Paulo</h3>
+                                <p>
+                                    Atendemos em toda São Paulo. Entre em contato conosco para agendar uma visita técnica da nossa equipe.
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="cardsBottom">
-                        <div class="cards"><!--Conteudo-->
+                        <div class="cards">
                             <i class="bi bi-house-check-fill"></i>
                             <div class="texto">
-                                <h3>aplicação para todo tipo de lajes e telhados</h3>
+                                <h3 style="text-align: justify;">aplicação para todo tipo de lajes e telhados</h3>
                                 <p>Com nossa tecnologia, é possível impermeabilizar qualquer tipo de laje e telhado.</p>
                             </div>
                         </div>
-                        <div class="cards"><!--Conteudo-->
+                        <div class="cards">
                             <i class="bi bi-check-circle-fill"></i>
                             <div class="texto">
                                 <h3>acabamento dos sonhos</h3>
-                                <p>Nosso acabamento proporciona não apenas uma estética mais bela, mas também assegura uma
+                                <p>Nosso acabamento proporciona não apenas uma estética mais bela, mas também assegura
+                                    uma
                                     casa mais protegida do calor.</p>
                             </div>
                         </div>
@@ -95,36 +105,39 @@
 
         <section class="servicos">
             <div class="interface">
-                <h2 class="titulo">Nossos Serviços</h2>
+                <h2 class="titulo">Nossos <span> Serviços</span></h2>
                 <div class="flex">
-                    <div class="imgServicos" style="background-image: url(Imagens/imagem-home.jpg);">
-                        <div class="overlay">Manta</div>
+                    <div class="cardServicos card1">
+                        <img src="Imagens/teste1-m.jpg" alt="">
+                        <h2>Manta aluminizada</h2>
+                        <p>Garante a total proteção contra vazamentos e infiltrações.
+                            Com sua tecnologia de isolamento térmico, reflete o calor e assegura uma temperatura agradável para sua casa.</p>
                     </div>
-                    <div class="imgServicos" style="background-image: url(Imagens/istockphoto-1478442508-612x612.jpg);">
-                        <div class="overlay">Manta</div>
-                    </div>
-                    <div class="imgServicos" style="background-image: url(Imagens/teste1-m.jpg);">
-                        <div class="overlay">Manta</div>
-                    </div>
+                    <!-- <div class="cardServicos card1">
+                        <img src="Imagens/teste1-m.jpg" alt="">
+                        <h2>Manta Geotêxtil</h2>
+                        <p>Proteção completa para o seu telhado! Nossos serviços criam uma defesa durável contra a água,
+                            assegura uma vida útil prolongada e restaura toda a estética do seu telhado.
+                        </p>
+                    </div> -->
                 </div>
             </div>
-
         </section>
 
-        <section class="contato">
+        <!-- <section class="contato">
             <div class="interface">
-                <h2>Resolva seus problemas agora mesmo!</h2>
-                <h3>Entre em contato conosco</h3>
+                <h2><span>Resolva seus problemas agora mesmo!</span></h2>
+                <h3><span>Entre em contato conosco</span></h3>
                 <div class="flex">
                     <a href="#"><button>Quero Meu Orçamento</button></a>
                 </div>
             </div>
-        </section>
+        </section> -->
     </main>
 
-    <footer>
+    <!-- <footer>
         <p>&copy Impermeatech. Todos os direitos Reservados</p>
-    </footer>
+    </footer> -->
 </body>
 
 </html>

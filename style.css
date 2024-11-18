@@ -8,12 +8,8 @@
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #f5f2f2;
     color: #ffffff;
-    /* background-color: #268DE0;
-    background-color: #1DC6E0;
-    background-color: #2652E0;
-    background-color: #385166;  */
 }
 
 a,
@@ -25,20 +21,21 @@ ul {
 
 html {
     height: 100%;
-    font-family: Inter, sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 500;
 }
 
 .interface {
-    max-width: 1380px;
-    margin: 0 auto;
+    min-width: 320px;
+    max-width: 1120px;
+    margin: auto;
 }
 
 .flex {
     display: flex;
 }
 
-button{
+button {
     font-family: "Roboto", sans-serif;
     padding: 1em 1.8em;
     border: none;
@@ -50,19 +47,19 @@ button{
     transition: .2s;
 }
 
-button:hover{
+button:hover {
     background-color: rgb(12, 179, 12);
     color: white;
     box-shadow: 0 0 48px 10px green;
 }
 
-.float{
+.float {
     opacity: 0;
     position: fixed;
     width: 80px;
     height: 80px;
     bottom: 20px;
-    right: 20px; 
+    right: 20px;
     background-color: rgb(21, 211, 21);
     border-radius: 50px;
     border: 2px solid #ffffff;
@@ -74,15 +71,20 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 1s ease, opacity .5s ease; /* Transição suave */
-    transform: translateX(0px); /* Movimenta para fora da tela inicialmente */
+    transition: transform 1s ease, opacity .5s ease;
+    /* Transição suave */
+    transform: translateX(0px);
+    /* Movimenta para fora da tela inicialmente */
 }
 
 .rolagemWhats {
+    position: fixed;
     opacity: 1;
-    transform: translateX(0); /* Volta para a posição correta */
+    transform: translateX(0);
+    /* Volta para a posição correta */
 }
-#whats a{
+
+#whats a {
     color: #fff;
 }
 
@@ -110,13 +112,14 @@ header.rolagem span {
 }
 
 header {
-    border-bottom: 1px solid;
+    border-bottom: 3px solid;
     width: 100%;
     padding: 3.75rem 4%;
     position: fixed;
     top: 0;
     left: 0;
     transition: .5s;
+    z-index: 1000;
 }
 
 header span {
@@ -161,14 +164,14 @@ header.rolagem button {
 }
 
 header.rolagem button:hover {
-    background-color: #3ed9f1;
+    background-color: rgb(12, 179, 12);
     color: #fff;
 }
 
 /* Estilização do hero. */
 .homeBack {
     height: 100vh;
-    background: linear-gradient(to bottom, #87CEEB, #00BFFF);
+    background: linear-gradient(to bottom, #5cb0d2, #61bede);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -182,175 +185,188 @@ header.rolagem button:hover {
     padding: 40px 4%;
 }
 
-.home .flex{
+.home .flex {
     align-items: center;
     justify-content: center;
     gap: 30px;
 }
 
-.homeTexto{
+.homeTexto {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
 h1 {
-    font-family: Roboto, sans-serif;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
     font-size: 56px;
     font-weight: 800;
     border-bottom: 1px solid;
     padding-bottom: 10px;
-    width: 700px;
+    max-width: 700px;
     text-transform: uppercase;
 }
 
-.homeImagem img{
-    width: 500px;
-    height: 400px;
-    border-radius: 40px;
+h1 span {
+    background-color: #268DE0;
+    padding: 5px;
 }
 
-.subtituloHome{
+h2 span {
+    background-color: #268DE0;
+    color: #fff;
+    padding: 5px;
+}
+
+p span {
+    background-color: #268DE0;
+    padding: 5px;
+}
+
+.homeImagem img {
+    max-width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.subtituloHome {
     font-family: "Epilogue", serif;
     font-size: 20px;
     line-height: 30px;
     text-align: justify;
-    width: 650px;
+    max-width: 650px;
 }
 
-
-
 /*Estilização da section beneficios*/
-.beneficios{
+.beneficios {
+    height: 80vh;
     color: #17a8be;
-    padding: 40px 4%;
+    padding: 80px 4%;
 }
 
 h2 {
-    font-family: Montserrat;
+    font-family: "Montserrat", sans-serif;
     font-size: 40px;
     font-weight: 800;
     text-align: center;
     text-transform: uppercase;
 }
 
-.cards{
+.cards {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    color: #00BFFF;
+    color: #268DE0;
     padding: 20px;
-    border: 2px solid #00BFFF;
+    border: 2px solid #268DE0;
     border-radius: 40px;
     margin-top: 45px;
     transition: .2s;
-    
+
 
 }
 
-.cards:hover{
+.cards:hover {
     transform: scale(1.05);
     box-shadow: 0 0 8px #00282e6b;
 }
 
-.cards i{
+.cards i {
     font-size: 75px;
 }
 
-.texto h3{
+.texto h3 {
     font-size: 28px;
     text-transform: uppercase;
 }
 
-.texto p{
+.texto p {
     font-size: 20px;
     width: 500px;
 }
 
-.beneficios .flex{
+.beneficios .flex {
     gap: 30px;
     flex-direction: column;
 }
 
-.cardsTop{
+.cardsTop {
     display: flex;
     gap: 20px;
     align-items: center;
+    text-align: justify;
 }
 
-.cardsBottom{
+.cardsBottom {
     display: flex;
     gap: 20px;
+    text-align: justify;
 }
 
 /*Estilização Serviços*/
-.servicos{
+.servicos {
     height: 100vh;
-    background: linear-gradient(to bottom, #87CEEB, #00BFFF);
+    background: linear-gradient(to bottom, #5cb0d2, #61bede);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 80px 4%;
 }
 
-.servicos .flex{
+.servicos .flex {
     justify-content: space-around;
     margin-top: 60px;
 }
 
-.imgServicos{
-    width: 360px;
-    height: 460px;
-    background-size: cover;
-    background-position: 100% 0%;
-    transition: 8s;
-    cursor: pointer;
-    border-radius: 40px;
-    position: relative;
-}
-
-.imgServicos:hover{
-    background-position: 100% 100%;
-}
-
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.cardServicos {
+    background-color: #f5f2f2;
+    color: #268DE0;
+    width: 500px;
     height: 100%;
-    background-color: #000000bd;
-    border-radius: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: 600;
-    opacity: 0;
-    transition: .5s;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: rgba(255, 255, 255, 0.4) 0px 30px 90px;
 }
 
-.overlay:hover{
-    opacity: 1;
+.cardServicos h2 {
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid;
+}
+
+.cardServicos p {
+    font-size: 17px;
+    padding: 20px 20px;
+    text-align: justify;
+}
+
+.cardServicos img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 /*Estilização da section Contato*/
-.contato{
+.contato {
     color: #00BFFF;
     padding: 80px 4%;
 }
 
-h3{
-    /* height: 100vh; */
-    font-family: Montserrat;
+h3 {
+    font-family: "Montserrat", sans-serif;
     font-size: 30px;
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
+    margin-top: 20px;
+    color: #268DE0;
 }
 
-.contato button{
+.contato button {
     background-color: #00BFFF;
     color: #fff;
     font-family: "Roboto", sans-serif;
@@ -364,13 +380,13 @@ h3{
     transition: .3s;
 }
 
-.contato button:hover{
+.contato button:hover {
     background-color: green;
     color: white;
     box-shadow: 0 0 48px 10px green;
 }
 
-.contato .flex{
+.contato .flex {
     height: 60vh;
     display: flex;
     align-items: center;
@@ -378,7 +394,7 @@ h3{
 }
 
 /*Estilização do footer*/
-footer{
+footer {
     padding: 4rem;
     display: flex;
     justify-content: center;
@@ -391,3 +407,149 @@ footer p {
     font-weight: 600;
 }
 
+/*Responsividade*/
+@media screen and (max-width: 800px) {
+
+    /* Geral */
+    .flex {
+        flex-direction: column;
+    }
+
+    /* Cabeçalho */
+    nav ul {
+        display: none;
+        /* Ocultar menu no desktop */
+    }
+
+    nav {
+        align-items: center;
+    }
+
+    header {
+        padding: 40px 8%;
+    }
+
+    /* Home */
+    .homeBack {
+        height: auto;
+    }
+
+    .home .flex {
+        flex-direction: column-reverse;
+        align-items: center;
+        /* Garante que tudo fique centralizado */
+        margin-top: 130px;
+        gap: 0px;
+    }
+
+    .home {
+        padding: 60px 0%;
+    }
+
+    .homeTexto {
+        gap: 0px;
+        margin-top: 20px;
+        /* Espaçamento entre o texto e a imagem */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .homeTexto h1 {
+        font-family: "Roboto", sans-serif;
+        font-size: 25px;
+        font-weight: 600;
+        padding: 20px 4%;
+        text-transform: uppercase;
+    }
+
+    .homeTexto p {
+        font-size: 16px;
+        padding: 20px 4%;
+    }
+
+    .botaoHome {
+        padding: 20px 4%;
+        margin: auto;
+    }
+
+    .botaoHome button {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .botaoHome button:hover {
+        background-color: rgb(12, 179, 12);
+        color: white;
+        box-shadow: 0 0 48px 10px green;
+    }
+
+    .homeImagem img {
+        width: 100%;
+        /* Certifica-se de que a imagem se ajusta ao container */
+        height: 100%;
+        /* Mantém a proporção */
+
+    }
+
+    /* Beneficios */
+    .beneficios{
+        height: auto;
+        padding: 60px 0%;
+    }
+    .beneficios h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 20px 4%;
+    }
+    .cardsTop, .cardsBottom {
+        flex-direction: column; /* Empilha os cards verticalmente */
+        align-items: center;    /* Centraliza os cards */
+        gap: 20px;              /* Espaçamento entre os cards */
+        text-align: justify;
+    } 
+    .cards{
+        width: 90%;               /* Largura responsiva */
+        max-width: 400px;         /* Define um limite máximo */
+        padding: 20px;            /* Espaçamento interno */
+        box-sizing: border-box;   /* Inclui padding no cálculo da largura */
+        text-align: center;       /* Centraliza o conteúdo */
+        display: flex;            /* Ativa layout flexível */
+        flex-direction: column;   /* Organiza itens verticalmente */
+        align-items: center;      /* Centraliza os itens horizontalmente */
+        gap: 15px;                /* Espaço entre ícones, títulos e parágrafos */
+        text-align: justify;
+    }
+    .cards i {
+        font-size: 40px; 
+    }   
+    .cards h3 {
+        font-size: 18px;          /* Tamanho ajustado do título */
+        text-align: center;       /* Centraliza o texto */
+        word-wrap: break-word;    /* Quebra palavras longas */
+    }   
+    .cards p {
+        font-size: 14px;          /* Texto compacto */
+    }
+    .texto p{
+        width: 100%;
+        font-size: 14px;         /* Ajusta o tamanho do parágrafo */
+        line-height: 1.4;        /* Reduz o espaçamento entre linhas */
+        text-align: justify;        /* Alinha o texto à esquerda */
+
+    }
+
+    /* Serviços*/
+    .servicos{
+        height: auto;
+        padding: 60px 0%;
+    }
+    .servicos h2{
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 20px 4%;
+    }
+}
