@@ -26,13 +26,17 @@ html {
 }
 
 .interface {
-    min-width: 320px;
+    min-width: 310px;
     max-width: 1120px;
     margin: auto;
 }
 
 .flex {
     display: flex;
+}
+.homeBtn{
+    color: #e6e5e5;
+    background-color: rgb(12, 179, 12);
 }
 
 button {
@@ -84,7 +88,7 @@ button:hover {
     /* Volta para a posição correta */
 }
 
-#whats a {
+#whats a i {
     color: #fff;
 }
 
@@ -94,24 +98,29 @@ button:hover {
     margin: auto;
 }
 
-nav {
+.menuHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+.menuHeader a{
+    text-decoration: none;
+    color: #fff;
+}
 
-header.rolagem {
+#header.rolagem {
     background-color: #fff;
     padding: 20px 4%;
     border-bottom: 2px solid #1DC6E0;
+    
 }
 
-header.rolagem a,
-header.rolagem span {
+#header.rolagem a,
+#header.rolagem span{
     color: #1DC6E0;
 }
 
-header {
+#header {
     border-bottom: 3px solid;
     width: 100%;
     padding: 3.75rem 4%;
@@ -122,7 +131,7 @@ header {
     z-index: 1000;
 }
 
-header span {
+#header nav.menuHeader span {
     font-family: Teko;
     font-size: 40px;
     font-weight: 600;
@@ -130,18 +139,18 @@ header span {
     cursor: pointer;
 }
 
-header ul li {
+#header nav.menuHeader ul li {
     font-size: 19px;
     display: inline-block;
     margin: 0 40px;
 }
 
-header ul li a {
+#header nav.menuHeader ul li a {
     color: #fff;
     text-decoration: none;
 }
 
-header button {
+#header button {
     font-family: "Roboto", sans-serif;
     padding: 1em 1.8em;
     border: none;
@@ -151,21 +160,94 @@ header button {
     font-size: 16px;
 }
 
-header button:hover {
+#header button:hover {
     background-color: rgb(12, 179, 12);
     color: white;
     box-shadow: 0 0 48px 10px green;
 
 }
 
-header.rolagem button {
+#header.rolagem button {
     background-color: #1DC6E0;
     color: #fff;
 }
 
-header.rolagem button:hover {
+#header.rolagem button:hover {
     background-color: rgb(12, 179, 12);
     color: #fff;
+}
+
+/* Estilo do menu mobile */
+.btn-abrir{
+    display: none;
+}
+#header.rolagem .btn-abrir i{
+    color: #1DC6E0;
+    font-size: 30px;
+}
+#header.rolagem .menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    display: block;
+    padding: 10px 4%;
+}
+.btn-abrir i{
+    color: #fff;
+    font-size: 30px;
+}
+.menu-mobile{
+    background-color: #17a8be;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+.menu-mobile nav ul {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-end;
+    padding: 10px;
+
+}
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    display: block;
+    padding: 10px 4%;
+}
+.menu-mobile nav ul li a:hover{
+    background-color: #268DE0;
+}
+.menu-mobile .btn-fechar{
+    padding: 20px 8%;
+}
+.menu-mobile .btn-fechar i{
+    color: #fff;
+    font-size: 30px;
+}
+.overlay-menu{
+    background-color: #000000a9;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    display: none;
+}
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
 }
 
 /* Estilização do hero. */
@@ -241,7 +323,7 @@ p span {
 
 /*Estilização da section beneficios*/
 .beneficios {
-    height: 80vh;
+    height: 100vh;
     color: #17a8be;
     padding: 80px 4%;
 }
@@ -325,7 +407,7 @@ h2 {
     background-color: #f5f2f2;
     color: #268DE0;
     width: 500px;
-    height: 100%;
+    height: 500px;
     border-radius: 10px;
     text-align: center;
     box-shadow: rgba(255, 255, 255, 0.4) 0px 30px 90px;
@@ -408,32 +490,40 @@ footer p {
 }
 
 /*Responsividade*/
-@media screen and (max-width: 800px) {
-
+@media screen and (max-width: 1520px) {
     /* Geral */
     .flex {
         flex-direction: column;
     }
-
     /* Cabeçalho */
     nav ul {
         display: none;
         /* Ocultar menu no desktop */
     }
-
     nav {
         align-items: center;
     }
-
-    header {
-        padding: 40px 8%;
+    #header {
+        padding: 40px 2%;
+        display: flex;
+        justify-content: space-around;
     }
-
+    .conteudoHeader {
+        margin: 0px;
+    }
+    #header #logo{
+        font-size: 30px;
+    }
+    .btn-abrir{
+        display: flex;
+        justify-content: flex-end;
+        top: 0;
+        right: 0;
+    }
     /* Home */
     .homeBack {
         height: auto;
     }
-
     .home .flex {
         flex-direction: column-reverse;
         align-items: center;
@@ -441,11 +531,9 @@ footer p {
         margin-top: 130px;
         gap: 0px;
     }
-
     .home {
         padding: 60px 0%;
     }
-
     .homeTexto {
         gap: 0px;
         margin-top: 20px;
@@ -453,7 +541,6 @@ footer p {
         text-align: center;
         /* Centraliza o texto */
     }
-
     .homeTexto h1 {
         font-family: "Roboto", sans-serif;
         font-size: 25px;
@@ -461,28 +548,23 @@ footer p {
         padding: 20px 4%;
         text-transform: uppercase;
     }
-
     .homeTexto p {
-        font-size: 16px;
+        font-size: 20px;
         padding: 20px 4%;
     }
-
     .botaoHome {
         padding: 20px 4%;
         margin: auto;
     }
-
     .botaoHome button {
         font-weight: bold;
         font-size: 16px;
     }
-
     .botaoHome button:hover {
         background-color: rgb(12, 179, 12);
         color: white;
         box-shadow: 0 0 48px 10px green;
     }
-
     .homeImagem img {
         width: 100%;
         /* Certifica-se de que a imagem se ajusta ao container */
@@ -490,7 +572,6 @@ footer p {
         /* Mantém a proporção */
 
     }
-
     /* Beneficios */
     .beneficios{
         height: auto;
@@ -518,7 +599,7 @@ footer p {
         display: flex;            /* Ativa layout flexível */
         flex-direction: column;   /* Organiza itens verticalmente */
         align-items: center;      /* Centraliza os itens horizontalmente */
-        gap: 15px;                /* Espaço entre ícones, títulos e parágrafos */
+        gap: 0px;
         text-align: justify;
     }
     .cards i {
@@ -527,7 +608,7 @@ footer p {
     .cards h3 {
         font-size: 18px;          /* Tamanho ajustado do título */
         text-align: center;       /* Centraliza o texto */
-        word-wrap: break-word;    /* Quebra palavras longas */
+        margin-bottom: 10px;
     }   
     .cards p {
         font-size: 14px;          /* Texto compacto */
@@ -537,7 +618,6 @@ footer p {
         font-size: 14px;         /* Ajusta o tamanho do parágrafo */
         line-height: 1.4;        /* Reduz o espaçamento entre linhas */
         text-align: justify;        /* Alinha o texto à esquerda */
-
     }
 
     /* Serviços*/
@@ -547,9 +627,74 @@ footer p {
     }
     .servicos h2{
         font-family: "Montserrat", sans-serif;
-        font-size: 20px;
-        font-weight: 600;
+        font-size: 26px;
+        font-weight: 700;
         text-transform: uppercase;
         padding: 20px 4%;
     }
+    .cardServicos{
+        margin: auto;
+        width: 90%;               /* Largura responsiva */
+        max-width: 400px;         /* Define um limite máximo */
+        box-sizing: border-box;   /* Inclui padding no cálculo da largura */
+        text-align: center;       /* Centraliza o conteúdo */
+        display: flex;            /* Ativa layout flexível */
+        flex-direction: column;   /* Organiza itens verticalmente */
+        align-items: center;      /* Centraliza os itens horizontalmente */
+        text-align: justify;
+        margin-bottom: 25px;
+    }
+    .cardServicos h2{
+        font-size: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 0.5px solid;
+        font-weight: 600;
+    }
+    .cardServicos p{
+        width: 100%;
+        font-size: 14px;         /* Ajusta o tamanho do parágrafo */
+        line-height: 1.4;        /* Reduz o espaçamento entre linhas */
+        text-align: justify;        /* Alinha o texto à esquerda */
+    }
+    .cardServicos img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .servicos .flex{
+        margin-top: 10px;
+    }
+
+    /* Contato */
+    .contato{
+        height: auto;
+        padding: 60px 0%;
+    }
+    .contato h2{
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 10px 4%;
+        line-height: 2;
+    }
+    .contato h3{
+        font-size: 18px;          /* Tamanho ajustado do título */
+        text-align: center;       /* Centraliza o texto */
+        margin-bottom: 10px;
+    }
+    .contato .flex{
+        width: 90%;
+        margin: auto;
+        height: auto;
+        padding: 60px 0%;
+    }
+    .flex button{
+        font-weight: bold;
+        font-size: 16px;
+
+    }
+
+
 }

@@ -13,21 +13,39 @@
 <body>
     <header id="header">
         <div class="conteudoHeader">
-            <nav>
-                <span id="logo">Impermeatech</span>
-                <ul>
-                    <li><a href="#">Nossos Serviços</a></li>
-                    <li><button>Contato</button></li>
+            <nav class="menuHeader">
+                <a href="#inicio"><span id="logo">Impermeatech</span></a>
+                <ul>                    
+                    <li><a href="#beneficios">Beneficios</a></li>
+                    <li><a href="#servicos">Nossos Serviços</a></li>
+                    <li><a href="https://wa.me/5511987911892" target="_blank"><button class="homeBtn">Contato</button></a></li>
                 </ul>
             </nav>
         </div>
+        <div class="btn-abrir" id="btn-menu">
+           <i class="bi bi-list"></i>
+        </div>
+        <div class="menu-mobile" id="menu-mobile">
+            <div class="btn-fechar">
+                <i class="bi bi-x-lg"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://wa.me/5511987911892" target="_blank"><button class="homeBtn">Contato</button></a></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#beneficios">Beneficios</a></li>
+                    <li><a href="#servicos">Serviços</a></li>       
+                </ul>
+            </nav>
+        </div>
+        <div class="overlay-menu" id="overlay-menu"></div>
         <div id="whats">
-            <a href="#" class="float"><i class="bi bi-whatsapp my-float"></i> </a>
+            <a href="https://wa.me/5511987911892" target="_blank" class="float"><i class="bi bi-whatsapp my-float"></i> </a>
         </div>
     </header>
 
     <main>
-        <section class="homeBack">
+        <section class="homeBack" id="inicio">
             <div class="home">
                 <div class="interface">
                     <div class="flex">
@@ -40,20 +58,20 @@
                                 visita técnica gratuita e receba um <span>orçamento sem compromisso!</span>
                             </p>
                             <div class="botaoHome">
-                                <a href="#"><button>Quero um orçamento</button></a>
+                                <a href="https://wa.me/5511987911892" target="_blank"><button class="homeBtn">Quero um orçamento</button></a>
                             </div>
                         </div>
                         <picture class="homeImagem">
                             <source srcset="imagens/pequenas/foto-p.png" media="(max-width: 600px)">
-                            <img src="imagens/grandes/foto-g.png" alt="">
+                            <img src="imagens/grandes/foto-g.png" alt="Telhado com manta Geotêxtil Aplicada">
                         </picture>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="beneficios">
-            <div class="interface">
+        
+        <section class="beneficios" id="beneficios">
+            <div class="interface" >
                 <h2 class="titulo"><span>Benefícios</span> Para Você</h2>
                 <div class="flex">
                     <div class="cardsTop">
@@ -103,41 +121,47 @@
             </div>
         </section>
 
-        <section class="servicos">
+        <section class="servicos" id="servicos">
+
             <div class="interface">
                 <h2 class="titulo">Nossos <span> Serviços</span></h2>
                 <div class="flex">
                     <div class="cardServicos card1">
-                        <img src="Imagens/teste1-m.jpg" alt="">
+                        <picture>                       
+                            <img src="imagens/medias/mantaAluminizada.jpg" alt="Telhado com manta Aluminizada Aplicada">
+                        </picture>
                         <h2>Manta aluminizada</h2>
                         <p>Garante a total proteção contra vazamentos e infiltrações.
                             Com sua tecnologia de isolamento térmico, reflete o calor e assegura uma temperatura agradável para sua casa.</p>
                     </div>
-                    <!-- <div class="cardServicos card1">
-                        <img src="Imagens/teste1-m.jpg" alt="">
+                    <div class="cardServicos card1">
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="imagens/pequenas/foto5-p.jpg">
+                            <img src="imagens/medias/foto5-m.jpg" alt="Telhado com manta Liquida Geotêxtil Aplicada">
+                        </picture>
                         <h2>Manta Geotêxtil</h2>
                         <p>Proteção completa para o seu telhado! Nossos serviços criam uma defesa durável contra a água,
                             assegura uma vida útil prolongada e restaura toda a estética do seu telhado.
                         </p>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- <section class="contato">
+        <section class="contato">
             <div class="interface">
                 <h2><span>Resolva seus problemas agora mesmo!</span></h2>
                 <h3><span>Entre em contato conosco</span></h3>
                 <div class="flex">
-                    <a href="#"><button>Quero Meu Orçamento</button></a>
+                    <a href="https://wa.me/5511987911892" target="_blank"><button>Quero um Orçamento</button></a>
                 </div>
             </div>
-        </section> -->
+        </section>
     </main>
 
-    <!-- <footer>
+    <footer>
         <p>&copy Impermeatech. Todos os direitos Reservados</p>
-    </footer> -->
+    </footer>
 </body>
 
 </html>
