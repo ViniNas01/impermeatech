@@ -528,7 +528,7 @@ footer p {
         flex-direction: column;
         align-items: center;
         /* Garante que tudo fique centralizado */
-        margin-top: 130px;
+        margin-top: 100px;
         gap: 0px;
     }
     .home {
@@ -562,6 +562,7 @@ footer p {
         padding: 20px 4%;
         margin: auto;
         order: 1; /* Coloca o botão como o primeiro item */
+        margin-bottom: 20px;
     }
     .botaoHome button {
         font-weight: bold;
