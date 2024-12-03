@@ -26,9 +26,11 @@ html {
 }
 
 .interface {
-    min-width: 310px;
-    max-width: 1120px;
-    margin: auto;
+    width: 100%; /* Preenche 100% da largura da tela */
+    max-width: 1220px; /* Mas não excede 1220px */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 20px;
+    padding-left: 0px;
 }
 
 .flex {
@@ -265,6 +267,7 @@ button:hover {
 
 .home {
     padding: 40px 4%;
+    margin-top: 18vh;
 }
 
 .home .flex {
@@ -322,6 +325,7 @@ p span {
 }
 
 /*Estilização da section beneficios*/
+
 .beneficios {
     height: 100vh;
     color: #17a8be;
@@ -490,7 +494,7 @@ footer p {
 }
 
 /*Responsividade*/
-@media screen and (max-width: 1520px) {
+@media screen and (max-width: 1397px) {
     /* Geral */
     .flex {
         flex-direction: column;
@@ -509,7 +513,7 @@ footer p {
         justify-content: space-around;
     }
     .conteudoHeader {
-        margin: 0px;
+        margin: 0;
     }
     #header #logo{
         font-size: 30px;
@@ -527,12 +531,12 @@ footer p {
     .home .flex {
         flex-direction: column;
         align-items: center;
-        /* Garante que tudo fique centralizado */
-        margin-top: 100px;
+        margin-top: 0%;
         gap: 0px;
     }
     .home {
         padding: 60px 0%;
+        margin-top: 10vh;
     }
     .homeTexto {
         gap: 0px;
